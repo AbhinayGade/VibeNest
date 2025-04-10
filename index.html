@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vibe Nest</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #121212;
+      --text: #ffffff;
+      --card: #1e1e1e;
+      --highlight: #00cec9;
+    }
+    body.light {
+      --bg: #f2f2f2;
+      --text: #121212;
+      --card: #ffffff;
+      --highlight: #0984e3;
+    }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 2rem;
+      transition: all 0.3s;
+    }
+    h1 {
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3rem;
+      color: var(--highlight);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .card {
+      background: var(--card);
+      padding: 2rem;
+      border-radius: 1rem;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px var(--highlight);
+    }
+    a {
+      text-decoration: none;
+      color: var(--highlight);
+      font-weight: bold;
+    }
+    .toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--card);
+      color: var(--highlight);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle" onclick="toggleMode()">🌙 Toggle Mode</button>
+  <h1>Welcome to Vibe Nest</h1>
+  <div class="grid">
+    <div class="card"><a href="music.html">🎵 Songs</a></div>
+    <div class="card"><a href="books.html">📚 Books</a></div>
+    <div class="card"><a href="memes.html">😂 Memes</a></div>
+    <div class="card"><a href="games.html">🎮 Games</a></div>
+    <div class="card"><a href="mindspace.html">🧘 Mind Space</a></div>
+    <div class="card"><a href="mood.html">🎨 Mood Board</a></div>
+    <div class="card"><a href="news.html">📰 News</a></div>
+    <div class="card"><a href="polls.html">📊 Polls</a></div>
+    <div class="card"><a href="profile.html">🙋 Vibe Profile</a></div>
+    <div class="card"><a href="suggestions.html">💡 Suggestions</a></div>
+  </div>
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('light');
+    }
+  </script>
+</body>
+</html>
