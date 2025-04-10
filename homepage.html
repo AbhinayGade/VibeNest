@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vibe Nest</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #1f1c2c, #928dab);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+    header {
+      width: 100%;
+      text-align: center;
+      padding: 2rem 1rem;
+      background: rgba(0,0,0,0.2);
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      width: 90%;
+      max-width: 1200px;
+      padding: 2rem 1rem;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 1.5rem;
+      border-radius: 1rem;
+      text-align: center;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .card:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    .card h2 {
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Vibe Nest 🐣</h1>
+    <p>Where teens chill, chat, and vibe together</p>
+  </header>
+
+  <div class="grid">
+    <div class="card" onclick="location.href='chat.html'">
+      <h2>💬 Vibe Chat</h2>
+      <p>Real-time group & private chat</p>
+    </div>
+    <div class="card" onclick="location.href='bot.html'">
+      <h2>🤖 Vibe Buddy</h2>
+      <p>Your personal AI chatbot</p>
+    </div>
+    <div class="card" onclick="location.href='music.html'">
+      <h2>🎵 Music Lounge</h2>
+      <p>Playlists & daily tracks</p>
+    </div>
+    <div class="card" onclick="location.href='books.html'">
+      <h2>📚 Book Nook</h2>
+      <p>Cool reads & free ebooks</p>
+    </div>
+    <div class="card" onclick="location.href='games.html'">
+      <h2>🎮 Game Zone</h2>
+      <p>Online + offline games</p>
+    </div>
+    <div class="card" onclick="location.href='memes.html'">
+      <h2>😂 Meme Drop</h2>
+      <p>Upload, view, and vote on memes</p>
+    </div>
+    <div class="card" onclick="location.href='mood.html'">
+      <h2>🌈 Mood Board</h2>
+      <p>Post your current vibe</p>
+    </div>
+    <div class="card" onclick="location.href='mindspace.html'">
+      <h2>🧠 Mind Space</h2>
+      <p>Relax, journal & vent safely</p>
+    </div>
+    <div class="card" onclick="location.href='polls.html'">
+      <h2>💡 Suggestions & Polls</h2>
+      <p>Submit ideas and vote weekly</p>
+    </div>
+    <div class="card" onclick="location.href='profile.html'">
+      <h2>👥 Vibe Profile</h2>
+      <p>Customize your name, vibe & look</p>
+    </div>
+  </div>
+</body>
+</html>

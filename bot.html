@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vibe Buddy - Vibe Nest</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #141414;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    header {
+      background: #1f1c2c;
+      padding: 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    .chat-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      overflow-y: auto;
+    }
+    .message {
+      margin: 0.5rem 0;
+      padding: 0.75rem;
+      background: #2c2c54;
+      border-radius: 0.75rem;
+      max-width: 70%;
+    }
+    .user {
+      align-self: flex-end;
+      background: #4b6584;
+    }
+    .bot {
+      align-self: flex-start;
+      background: #82589F;
+    }
+    .input-box {
+      display: flex;
+      padding: 1rem;
+      background: #1f1c2c;
+    }
+    .input-box input {
+      flex: 1;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+    }
+    .input-box button {
+      padding: 0.75rem 1rem;
+      margin-left: 0.5rem;
+      border: none;
+      background: #6c5ce7;
+      color: white;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🤖 Vibe Buddy</h1>
+    <p>Talk to your personalized AI friend</p>
+  </header>
+
+  <div class="chat-container" id="chat">
+    <div class="message bot">Hey there! I'm your Vibe Buddy. Ask me anything or just talk 🫶</div>
+  </div>
+
+  <div class="input-box">
+    <input type="text" id="msgInput" placeholder="Say something..." />
+    <button onclick="talkToBot()">Send</button>
+  </div>
+
+  <script>
+    function talkToBot() {
+      const input = document.getElementById('msgInput');
+      const chat = document.getElementById('chat');
+      const msg = input.value.trim();
+      if (msg === '') return;
+
+      const userMsg = document.createElement('div');
+      userMsg.className = 'message user';
+      userMsg.textContent = msg;
+      chat.appendChild(userMsg);
+
+      // Basic bot reply logic
+      const botMsg = document.createElement('div');
+      botMsg.className = 'message bot';
+      let reply = "I'm still learning 🐣 Try again soon!";
+
+      if (msg.toLowerCase().includes('hello') || msg.toLowerCase().includes('hi')) {
+        reply = "Hey hey! What’s up? ✨";
+      } else if (msg.toLowerCase().includes('joke')) {
+        reply = "Why don’t skeletons fight each other? They don’t have the guts! 💀";
+      } else if (msg.toLowerCase().includes('sad')) {
+        reply = "I'm here for you 💜 Want to talk about it?";
+      } else if (msg.toLowerCase().includes('vibe')) {
+        reply = "Vibes are on point 🔥 What's your mood today?";
+      }
+
+      botMsg.textContent = reply;
+      chat.appendChild(botMsg);
+
+      input.value = '';
+      chat.scrollTop = chat.scrollHeight;
+    }
+  </script>
+</body>
+</html>
