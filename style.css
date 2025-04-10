@@ -1,0 +1,82 @@
+/* Vibe Nest Theme CSS */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  color: #ffda79;
+  text-align: center;
+  margin-top: 20px;
+}
+
+p, label, li, input, textarea {
+  font-size: 1.1em;
+}
+
+form, ul {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+input[type="text"],
+input[type="color"],
+input[type="submit"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffffff22;
+  color: #fff;
+}
+
+input[type="submit"] {
+  background: #ff7e5f;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background: #feb47b;
+}
+
+a {
+  color: #a0e7e5;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+iframe {
+  border: none;
+  border-radius: 10px;
+}
+
+/* Mobile optimization */
+@media (max-width: 600px) {
+  body {
+    font-size: 1.2em;
+    padding: 10px;
+  }
+
+  h1, h2 {
+    font-size: 1.6em;
+  }
+
+  form, ul {
+    padding: 15px;
+  }
+}
